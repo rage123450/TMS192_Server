@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="DEBUG">
+<!--        <Root level="INFO">-->
+            <AppenderRef ref="Console"/>
+        </Root>
+        <!--特別對lib設定log等級-->
+        <logger name="com.zaxxer.hikari" level="info"/>
+        <logger name="org.hibernate" level="info"/>
+        <logger name="io.netty" level="error"/>
+    </Loggers>
+</Configuration>
